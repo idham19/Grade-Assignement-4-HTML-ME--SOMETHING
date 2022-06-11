@@ -1,0 +1,125 @@
+.about__achievements{
+    margin: 2rem 0;
+}
+.about__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+.achievement__icon{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+.achievement{
+    background-color: rgb(32, 138, 102);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+
+/* ----------------TEAM SECTION---------------*/
+
+.teams{
+    text-align: center;
+    margin-top: 4rem;
+    background-color: rgb(32, 121, 91);
+    
+   
+}
+
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+
+}
+.team{
+    background-color: rgb(142, 170, 164);
+    border: 1px transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    filter: saturate(0);
+transition: all 0.3s;
+  
+}
+.team:hover{
+    filter: saturate(1);
+}
+.image__profile{
+padding: 2.5rem;
+
+}
+
+.image__profile img{
+    width: 15rem;
+    height: 15rem;
+    padding-right: 2rem;
+   
+}
+.team h4{
+    padding: 1rem;
+}
+.sociale__icon{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(146, 146, 223);
+    padding: 2rem;
+    border-radius: 20px;
+    right: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+
+}
+.team:hover .sociale__icon{
+    right: 0;
+  
+}
+.sociale__icon a i{
+  padding: 15px;
+}
+.sociale__icon a :hover{
+    transform: scale(1.2);
+
+}
+
+
+@media  screen and (min-width:1350px) {
+    .team__container{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 3rem;
+    
+    }
+    
+}
+
+
+@media  screen and (max-width:650px) {
+    .team__container{
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 1rem;
+    
+    }
+    .image__profile img{
+        width: 15rem;
+        height: 15rem;
+        
+    
+    }
+    .about__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100vh;
+        gap: 4rem;
+    }
+}
